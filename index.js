@@ -97,14 +97,26 @@ app.post('/:id', cors() , (req, res) => {
 \n`})});
                 break;
             case 'WeatherForecast':
-                fetch(`https://wttr.in/${latLon}?format=The+for+you+today+is:+%C+%c\nThe+tempature+is+%t+but+it+feels+like+%f`)
-                    .then(res => res.text())
-                    .then(body => res.send({ msg: body}))
+
+                if (latLon != 'undefined') {
+                    fetch(`https://wttr.in/${latLon}?format=The+for+you+today+is:+%C+%c\nThe+tempature+is+%t+but+it+feels+like+%f`)
+                        .then(res => res.text())
+                        .then(body => res.send({ msg: body}))
+                } else {
+                    res.send({ msg: 'no location provided'})
+                }
+                
                 break;
             case 'Time' :
-                fetch(`https://wttr.in/${latLon}?format=It's+%T+right+now`)
-                    .then(res => res.text())
-                    .then(body => res.send({ msg: body}))
+
+                if (latLon != 'undefined') {
+                    fetch(`https://wttr.in/${latLon}?format=It's+%T+right+now`)
+                        .then(res => res.text())
+                        .then(body => res.send({ msg: body}))
+                } else {
+                    res.send({ msg: 'no location provided'})
+                }
+                    
                 break;
             case 'Exit':
                 res.send({
