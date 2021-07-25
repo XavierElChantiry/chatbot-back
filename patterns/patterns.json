@@ -1,0 +1,47 @@
+[
+    {
+       "pattern": "\\b(?<greeting>Hi|Hello|Hey)\\b",
+       "intent": "Hello"
+    },
+    {
+       "pattern": "\\b(bye|exit)\\b",
+       "intent": "Exit"
+    },
+    {
+      "pattern": "\\b(help|do)\\b",
+      "intent": "Help"
+    },
+    {
+      "pattern": "\\b(meal|Meal|food|Food|eat|Eat|recipe)\\b",
+      "intent": "Meal"
+    },
+    {
+      "pattern": "\\b(Fact|fact|bored|Bored)\\b",
+      "intent": "Fact"
+    },
+    {
+       "pattern": "\\b(Joke|joke|laugh|Laugh|funny|Funny)\\b",
+       "intent": "Joke"
+    },
+    {
+       "pattern": "\\b(weather|Weather)\\b",
+       "intent": "WeatherForecast"
+    },
+    {
+       "pattern": "\\b(time|Time)\\b",
+       "intent": "Time"
+    },
+
+    {
+       "pattern": "like\\sin\\s\\b(?<city>.+)",
+       "intent": "WeatherForecast"
+    },
+    {
+       "pattern": "\\b(?<weather>hot|cold|rain|rainy|sunny|snow|thunderstorms|windy|drizzle)\\b\\sin\\s\\b(?<city>[a-z]+[ a-z]+?)\\b(?<time>day\\safter\\stomorrow|tomorrow|today)$",
+       "intent": "WeatherForecast"
+    },
+    {
+       "pattern": "\\b(?<weather>hot|cold|rain|rainy|sunny|snow|thunderstorms|windy|drizzle)\\b\\s\\b(?<time>day\\safter\\stomorrow|tomorrow|today)\\sin\\s\\b(?<city>[a-z]+[ a-z]+?)$",
+       "intent": "WeatherForecast"
+    }
+ ]
