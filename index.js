@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require('cors')
 const fetch = require("node-fetch");
 const matcher = require('./matcher'); 
+const patterns = require("./patterns/patterns.json")
 
 const app = express();
 const PORT = process.env.port || 5000;
@@ -17,8 +18,8 @@ app.listen(
 
 app.get("/", (req, res) => {
     res.status(200).send({
-        hats: 'blue hat',
-        shirt: 'white shirt'
+        patterns: patterns,
+
     })
 
 });
