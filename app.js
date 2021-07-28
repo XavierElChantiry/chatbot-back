@@ -53,8 +53,12 @@ app.post('/:id', cors() , (req, res) => {
                 break;
             case 'Help':
                     res.send({
-                        // msg: `HATS ARE COOL ${id} ${logo}`
                         msg: `I can only tell you a joke, the time, a randm fact, a random recipe, or the weather of today.`
+                    });
+                    break;
+            case 'HRU':
+                    res.send({
+                        msg: `I am doing well thank you for asking`
                     });
                     break;
             case 'Joke' :
@@ -105,7 +109,7 @@ app.post('/:id', cors() , (req, res) => {
                 break;
             case 'WeatherForecast':
                 if (latLon != 'undefined') {
-                    fetch(`https://wttr.in/${latLon}?format=The+forcast+today+is:+%C+%c\nThe+tempature+is+%t.+it+feels+like+%f`)
+                    fetch(`https://wttr.in/${latLon}?format=The+forcast+for+you+today+is:+%C+%c\nThe+tempature+is+%t.+it+feels+like+%f`)
                         .then(res => res.text())
                         .then(body => res.send({ msg: body}))
                 } else {

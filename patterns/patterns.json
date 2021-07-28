@@ -31,7 +31,10 @@
        "pattern": "\\b(time|Time)\\b",
        "intent": "Time"
     },
-
+    {
+      "pattern": "how\\sare\\syou\\b",
+      "intent": "HRU"
+    },
     {
        "pattern": "like\\sin\\s\\b(?<city>.+)",
        "intent": "WeatherForecast"
