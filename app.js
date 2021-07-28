@@ -11,10 +11,14 @@ app.use(express.json());
 app.use(cors())
 
 
+
+
 app.listen(
     PORT,
     () => console.log(`living on http://localhost:${PORT}`)
 );
+
+app.get('/.well-known/pki-validation/353AE23A63F132AFB8D412122F0D40CF.txt', (req, res) => res.download('.well-known/pki-validation/353AE23A63F132AFB8D412122F0D40CF.txt'))
 
 app.get("/", (req, res) => {
     res.status(200).send({
@@ -23,6 +27,8 @@ app.get("/", (req, res) => {
     })
 
 });
+
+
 
 app.post('/:id', cors() , (req, res) => {
     const {id} = req.params;
