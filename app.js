@@ -61,6 +61,11 @@ app.post('/:id', cors() , (req, res) => {
                         msg: `I am doing well thank you for asking`
                     });
                     break;
+            case 'HRU':
+                    res.send({
+                        msg: `Its nice to meat you i am named ham all lowercase`
+                    });
+                    break;
             case 'Joke' :
                 fetch(`https://official-joke-api.appspot.com/jokes/random`)
                     .then(res => res.text())

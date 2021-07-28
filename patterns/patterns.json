@@ -32,6 +32,10 @@
        "intent": "Time"
     },
     {
+       "pattern": "\\b(Name|name|meet)\\b",
+       "intent": "Name"
+    },
+    {
       "pattern": "how\\sare\\syou\\b",
       "intent": "HRU"
     },
