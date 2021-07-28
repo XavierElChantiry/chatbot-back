@@ -99,7 +99,7 @@ app.post('/:id', cors() , (req, res) => {
                 break;
             case 'WeatherForecast':
                 if (latLon != 'undefined') {
-                    fetch(`https://wttr.in/${latLon}?format=The+forcast+today+is:+%C+%c\nThe+tempature+is+%t.+it+feels+like+%f?m`)
+                    fetch(`https://wttr.in/${latLon}?format=The+forcast+today+is:+%C+%c\nThe+tempature+is+%t.+it+feels+like+%f`)
                         .then(res => res.text())
                         .then(body => res.send({ msg: body}))
                 } else {
