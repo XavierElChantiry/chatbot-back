@@ -2,7 +2,7 @@
 This project is the back end logic for a chat bot. It is a basic build that can easily be built and improved upon.
 
 ## Usage
-To use this app, clone the git repository. Then, from within the reposity run ```node start``` or ```node index.js```.
+To use this app, clone the git repository. Then, from within the reposity run ```npm install``` then run ```node start``` or ```node index.js```.
 
 Now the app is running on http://localhost:5000/
 
