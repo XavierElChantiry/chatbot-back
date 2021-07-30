@@ -17,13 +17,17 @@ body must contains "logo":"whatever_information_you_want" and "latLon":"Preferab
 
 
 ## Improving The Bot
-To improve the bot you must add a Pattern and Intent to the patterns.json file in the patterns folder and add a case to do what you want it to.
+To improve the bot you must 
+
+add a Pattern and Intent to the patterns.json file in the patterns folder 
 ```
     {
       "pattern": "Pattern_added_with_regular_expression_format_or_with_xregexp_format",
       "intent": "Intent"
     },
 ```
+
+you also must  add a case to handle the new intent in the app.js file
 ```
 case 'Intent':
   res.send({
@@ -31,3 +35,4 @@ case 'Intent':
     });
   break;
 ```
+This is hosted on aws. The domain it is hosted on is https://chatbotback.us-east-2.elasticbeanstalk.com/ 
