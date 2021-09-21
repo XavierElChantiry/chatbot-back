@@ -53,7 +53,7 @@ app.post('/:id', cors() , (req, res) => {
                 break;
             case 'Help':
                     res.send({
-                        msg: `I can only tell you a joke, the time, a randm fact, a random recipe, or the weather of today.`
+                        msg: `I can only tell you a joke, the time, a random fact, a random recipe, or the weather of today.`
                     });
                     break;
             case 'HRU':
@@ -61,15 +61,15 @@ app.post('/:id', cors() , (req, res) => {
                         msg: `I am doing well thank you for asking`
                     });
                     break;
-            case 'HRU':
+            case 'Name':
                     res.send({
                         msg: `Its nice to meat you i am named ham all lowercase`
                     });
                     break;
             case 'Joke' :
-                fetch(`https://official-joke-api.appspot.com/jokes/random`)
+                fetch(`https://v2.jokeapi.dev/joke/Any?type=twopart&blacklistFlags=nsfw,racist,sexist,explicit&lang=en`)
                     .then(res => res.text())
-                    .then(body => res.send( { msg: `${JSON.parse(body).setup}\n \n....${JSON.parse(body).punchline}`}));
+                    .then(body => res.send( { msg: `${JSON.parse(body).setup}\n \n....${JSON.parse(body).delivery}`}));
                 break;
             case 'Fact' :
                 fetch(`https://uselessfacts.jsph.pl/random.json?language=en`)
