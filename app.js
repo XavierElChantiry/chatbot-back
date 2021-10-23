@@ -19,6 +19,7 @@ app.listen(
 );
 
 app.get('/.well-known/pki-validation/353AE23A63F132AFB8D412122F0D40CF.txt', (req, res) => res.download('.well-known/pki-validation/353AE23A63F132AFB8D412122F0D40CF.txt'))
+app.get('/.well-known/pki-validation/0A07FD9BBD4A87E31BD498145AE50A90.txt', (req, res) => res.download('.well-known/pki-validation/0A07FD9BBD4A87E31BD498145AE50A90.txt'))
 
 app.get("/", (req, res) => {
     res.status(200).send({
