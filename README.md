@@ -38,4 +38,3 @@ case 'Intent':
     });
   break;
 ```
-This is hosted on AWS. The domain it is hosted on is https://chatbotback.us-east-2.elasticbeanstalk.com/ 
